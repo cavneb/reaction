@@ -1,13 +1,15 @@
 {
-  "name": "react-hot-boilerplate",
-  "version": "0.1.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "name": "reaction",
+  "version": "0.0.1",
+  "description": "JS seed for a ReactJS app; including hot code reloading",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "serve": "node server.js",
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/megalithic/reaction.git"
   },
   "keywords": [
     "react",
@@ -21,19 +23,40 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Seth Messer (@megalithic)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/megalithic/reaction/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/megalithic/reaction",
   "devDependencies": {
+    "css-loader": "~0.6.6",
     "jsx-loader": "^0.11.0",
+    "karma": "~0.12.16",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-jasmine": "~0.1.5",
+    "karma-phantomjs-launcher": "~0.1.1",
+    "karma-script-launcher": "~0.1.0",
+    "karma-webpack-plugin": "~1.0.0",
+    "lodash": "^2.4.1",
+    "moment": "^2.8.2",
+    "phantomjs": "^1.9.7-15",
+    "react-dispatcher": "^0.2.0",
     "react-hot-loader": "^0.4.2",
+    "react-router": "^0.5.2",
+    "react-tools": "^0.11.1",
+    "sass-loader": "~0.2.0",
+    "style-loader": "~0.6.0",
+    "url-loader": "~0.5.2",
     "webpack": "^1.3.7",
     "webpack-dev-server": "^1.4.10"
   },
   "dependencies": {
-    "react": "^0.11.1"
+    "react": ">=0.11.1",
+    "flux": "2.0.0",
+    "qs": "2.2.2",
+    "when": "^3.4.4"
   }
 }

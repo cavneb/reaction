@@ -21,6 +21,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loaders: ['react-hot', 'jsx?harmony'] },
+      { test: /\.png$/, loader: "url-loader?mimetype=image/png" }
     ]
   }
 };
