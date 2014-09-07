@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "JS seed for a ReactJS app; including hot code reloading",
   "scripts": {
-    "start": "node server.js",
-    "serve": "node server.js",
-    "dev": "node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +14,8 @@
     "reactjs",
     "boilerplate",
     "hot",
-    "hot",
     "reload",
+    "hot-reload",
     "hmr",
     "live",
     "edit",
@@ -31,6 +29,8 @@
   "homepage": "https://github.com/megalithic/reaction",
   "devDependencies": {
     "css-loader": "~0.6.6",
+    "flux": "2.0.0",
+    "jquery": "^2.1.1",
     "jsx-loader": "^0.11.0",
     "karma": "~0.12.16",
     "karma-chrome-launcher": "~0.1.2",
@@ -39,13 +39,13 @@
     "karma-jasmine": "~0.1.5",
     "karma-phantomjs-launcher": "~0.1.1",
     "karma-script-launcher": "~0.1.0",
-    "karma-webpack-plugin": "~1.0.0",
+    "karma-webpack": "^1.2.2",
     "lodash": "^2.4.1",
     "moment": "^2.8.2",
     "phantomjs": "^1.9.7-15",
     "react-dispatcher": "^0.2.0",
     "react-hot-loader": "^0.4.2",
-    "react-router": "^0.5.2",
+    "react-router": "^0.7.0",
     "react-tools": "^0.11.1",
     "sass-loader": "~0.2.0",
     "style-loader": "~0.6.0",
@@ -54,9 +54,10 @@
     "webpack-dev-server": "^1.4.10"
   },
   "dependencies": {
+    "jquery": "^2.1.1",
     "react": ">=0.11.1",
     "flux": "2.0.0",
     "qs": "2.2.2",
-    "when": "^3.4.4"
+    "when": "^3.4.5"
   }
 }

@@ -1,7 +1,7 @@
 Reaction
 =====================
 
-## A React JS Seed / Starter Kit / Boilerplate
+### A React JS Seed / Starter Kit / Boilerplate
 
 **This project/repo was graciously borrowed and modified from [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)**
 
@@ -15,10 +15,10 @@ npm start
 open http://localhost:3000
 ```
 
-Now edit `scripts/App.js`.
+Now edit `app/js/index.js`.
 Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
-### Dependencies and additions I've made to the original boilerplate
+### Dependencies
 
 * React
 * Webpack
