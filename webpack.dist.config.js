@@ -1,11 +1,11 @@
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
-  debug: true,
+  devtool: false,
+  debug: false,
   stats: {
     colors: true,
-    reasons: true
+    reasons: false
   },
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
@@ -13,12 +13,15 @@ module.exports = {
     './src/js/index'
   ],
   output: {
-    path: __dirname + '/assets',
+    path: 'dist/assets/',
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.IgnorePlugin(/vertx/)
   ],
   resolve: {
