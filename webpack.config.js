@@ -1,5 +1,9 @@
 var webpack = require('webpack');
 
+var port = JSON.parse(process.env.npm_package_config_port || 3000),
+    subdomain = JSON.parse(process.env.npm_package_config_subdomain),
+    url = subdomain ?  'https://' + subdomain + '.localtunnel.me' : 'http://localhost:' + port;
+
 module.exports = {
   devtool: 'eval',
   debug: true,
@@ -8,8 +12,9 @@ module.exports = {
     reasons: true
   },
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/dev-server',
+    // 'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?' + url,
+    'webpack/hot/only-dev-server',
     './src/js/index'
   ],
   output: {
@@ -19,10 +24,18 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.IgnorePlugin(/vertx/)
+    new webpack.NoErrorsPlugin(),
+    new webpack.IgnorePlugin(/vertx/),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jq: "jquery",
+      jQuery: "jquery"
+    })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    moduleDirectories: ['node_modules', 'bower_components'],
+    alias: { }
   },
   module: {
     loaders: [
